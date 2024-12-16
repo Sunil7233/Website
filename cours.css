@@ -172,7 +172,7 @@ footer .source{
     }
 }
 
-@media screen and (max-width: 853px) {
+@media screen and (max-width: 943px) {
 
     nav .barre{
         font-size: 20px;
@@ -184,8 +184,12 @@ footer .source{
     header .title h2{
         font-size: 55px;
     }
+
+    .support-cours .item img{
+        width: 220px;
+    }    
     .support-cours .item .point-4 img{
-        width: 450px;
+        width: 350px;
     }  
 
     h2.separator{
