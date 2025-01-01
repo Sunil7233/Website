@@ -334,6 +334,12 @@ footer .source{
 }
 
 @media screen and (max-width: 550px){
+
+    body{
+    background-size: auto;
+
+    }
+    
     nav .barre{
         font-size: 20px;
     }
