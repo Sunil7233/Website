@@ -407,8 +407,12 @@ footer .source{
     }
 
     .container .item .text table th{
-        font-size: 22px;
+        font-size: 19px;
         
+    }
+
+    .container{
+        padding: 0px 10px;
     }
 }
 
@@ -420,6 +424,11 @@ footer .source{
 
     .container .item .text table img{
         width: 160px;
+    }
+
+    .container .item .text table th{
+        font-size: 17px;
+        
     }
 }
 
@@ -452,6 +461,16 @@ footer .source{
 
     .container{
         padding: 0px 10px;
+    }
+
+    .container .item .text table th{
+        font-size: 16px;
+        
+    }
+
+    .container .item .text table td{
+        font-size: 13px;
+        
     }
 
     h2.question{
