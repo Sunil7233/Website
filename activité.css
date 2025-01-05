@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background: url(Assets/fond.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.nav{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .barre{
+    font-size: 25px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: #fff;
+    align-items: center;
+    height: 80px;
+}
+nav .menu{
+    display: none;
+    margin-left: 50px;
+    height: 80px;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+header h1{
+    font-size: 70px;
+    color: white;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow:visible;
+
+}
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: slide 30s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box a {
+    position: absolute;
+    top: 0;
+    left: -200;
+    width: 150%;
+    height: 180%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(350px);
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 25px;
+    z-index:1;
+}
+
+.box a::before{
+    content:"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 25px;
+    transform: translateZ(-1px);
+}
+
+.box a h5 {
+    font-size: 35px;
+    margin-top: 10px;
+    transition: 2s;
+}
+
+.box a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    margin-top: 60px;
+    object-fit: cover;
+    transition: 2s;
+    
+
+}
+
+.box a:hover {
+    border-radius: 25px;
+    
+    border-width: 8px; 
+    border-style: solid; 
+    border-image: linear-gradient(rgb(48, 186, 224), rgb(174, 32, 217));
+    border-image-slice: 1;
+    
+}
+
+footer{
+    margin-top: 300px;
+    background-color: black;
+    color: #fff;
+    padding: 80px 80px;
+}
+footer a{
+    color: #fff;
+}
+footer a:hover{
+    color: rgb(22, 115, 202);
+}
+
+footer h3{
+   font-size: 45px;
+}
+
+footer .source{
+    padding: 20px 0px;
+    font-size: 25px;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: perspective(1000px) rotateY(720deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    header h1{
+        font-size: 60px;
+    }
+    .box{
+        width: 180px;
+        height: 180px;
+    }
+
+    .box a {
+        transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
+    }
+
+    .box a h5{
+        font-size:30px;
+    }
+
+    
+}
+
+@media screen and (max-width: 853px) {
+
+    nav .barre{
+        font-size: 20px;
+    }
+
+    .box{
+        height: 150px;
+        width: 150px;
+    }
+
+    .box a img{
+        margin-top: 50px;
+    }
+
+    .box a h5{
+        font-size:33px;
+    }
+
+    footer{
+        margin-top: 100px;
+    }
+} 
+
+@media screen and (max-width: 800px){
+    .box{
+        height: 130px;
+        width: 130px;
+    }
+
+    .box a {
+        transform: rotateY(calc(var(--i) * 60deg)) translateZ(250px);
+    }
+
+    .box a h5{
+        font-size: 23px
+    }
+
+    .box a img{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .box a {
+        transform: rotateY(calc(var(--i) * 60deg)) translateZ(210px);
+    }
+}
+
+@media screen and (max-width: 570px){
+
+    .container{
+        margin-top: 50px;
+    }
+    .box a {
+        transform: rotateX(calc(var(--i) * 60deg)) translateZ(260px);
+    }
+
+    .box a:hover {
+        border-radius: 25px;
+        
+        border-width: 8px; 
+        border-style: none; 
+        border-image: linear-gradient(rgb(48, 186, 224), rgb(174, 32, 217));
+        border-image-slice: 0;
+        
+    }
+
+    @keyframes slide {
+        0% {
+            transform: perspective(1000px) rotateX(600deg);
+        }
+    
+        100% {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

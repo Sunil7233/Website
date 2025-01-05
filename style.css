@@ -1,0 +1,847 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    object-fit: cover;
+}
+
+body{
+    /*background-color: #f1f1f1;*/
+    background: url(Assets/fond.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.nav{
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .barre{
+    font-size: 25px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: #fff;
+    align-items: center;
+    height: 80px;
+}
+nav .menu{
+    display: none;
+    margin-left: 50px;
+    height: 80px;
+}
+
+.arrow{
+    font-size: 60px;
+    color: black;
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow a{
+    display: flex;
+    justify-content: center;
+}
+
+ 
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.earth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 512px;
+    height: 512px;
+    background: url(Assets/Terr_tourne_moyen.jpg.png);
+    background-size :cover;
+    background-repeat: repeat-x;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 1),
+    0 0 50px #4069ff;
+    animation: animateEarth 15s linear infinite;
+}
+
+@keyframes animateEarth
+{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 1024px 0;
+    }
+}
+
+.circle{
+    transform-style: preserve-3d;
+    animation: animateText 10s linear infinite;
+}
+
+.circle span{
+    position :absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #35146f;
+    font-size: 6em;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 5px 11px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 28)))
+    translateZ(290px) ;
+    border-top :4px solid #35146f;
+    border-bottom :4px solid #35146f;
+}
+
+.circle span::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateZ(-5px);
+
+
+}
+
+@keyframes animateText
+{
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px) ;
+    }
+    
+
+
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+    }
+}
+
+h2.separator{
+    padding: 0 80px;
+    font-size: 50px;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.support-cours{
+    padding: 0 80px;
+    margin: 50px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 30px;
+
+}
+
+.support-cours .item,
+.act-list .item{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 350px;
+    
+}
+
+.support-cours .item:hover,
+.act-list .item:hover{
+    box-shadow: none;
+    background: none;
+    color: #fff;
+}
+
+.support-cours .item .header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-cours .item .header i{
+    font-size: 60px;
+}
+
+.support-cours .item .header h5{
+    font-size: 30px;
+    text-align: center;
+}
+
+.support-cours .item p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 4px;
+}
+
+.act-list .container{
+    padding: 0 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.act-list .item{
+    width: auto;
+}
+
+.act-list .item img{
+    width: 280px;
+    height: 280px;
+    border-radius: 18px;
+}
+
+.act-list .item .info{
+    margin-top: 10px;
+
+}
+
+.act-list .item .info h5{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.act-list .item .info p{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+
+}
+
+
+.act-list .item .info .correction,
+.act-list .item .info .act,
+.act-list .item .info .video{
+    margin-top: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 100px;
+    background-color: #f1f1f1;
+    border-radius: 18px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.act-list .item .info .correction:hover,
+.act-list .item .info .act:hover,
+.act-list .item .info .video:hover{
+    box-shadow: none;
+}
+.act-list .item .info i{
+    margin-right: 5px;
+    color: black;
+}
+
+footer{
+    margin-top: 80px;
+    background-color: black;
+    color: #fff;
+    padding: 80px 80px;
+}
+footer a{
+    color: #fff;
+}
+footer a:hover{
+    color: rgb(22, 115, 202);
+}
+
+footer h3{
+   font-size: 45px;
+}
+
+footer .source{
+    padding: 20px 0px;
+    font-size: 25px;
+}
+
+
+
+
+@media  screen and (max-width: 900px) {
+    header .left h1{
+        font-size: 60px;
+    }
+
+    header{
+        justify-content: center;
+    }
+    .support-cours .item{
+        width: 300px;
+    }
+
+    .support-cours .item .header i{
+        font-size: 50px;
+    }  
+
+    .support-cours .item .header h5{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    h2.separator{
+        font-size: 45px;
+    } 
+}
+
+
+@media  screen and (max-width: 834px) {
+    .support-cours,
+    .act-list{
+        justify-content: center;
+    }
+
+    nav .barre{
+        font-size: 20px;
+    }
+    
+    .support-cours .item{
+        width: 250px;
+    }
+
+    .support-cours .item .header i{
+        font-size: 40px;
+    }
+
+    .support-cours .item .header h5{
+        font-size: 20px;
+    }
+
+    h2.separator{
+        font-size: 40px;
+    } 
+}
+
+
+@media  screen and (max-width: 750px) {
+    .earth{
+        width: 440px;
+        height: 440px;
+        background: url(Assets/Terr_tourne.png);
+    }  
+
+    .circle span{
+        
+        font-size: 5em;
+        transform: rotateY(calc(var(--i) * calc(360deg / 28)))
+        translateZ(260px) ;
+    }  
+
+    @keyframes animateEarth
+    {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 880px 0;
+    }
+    }
+    h2.separator{
+        padding: 0 40px;
+        
+    }
+    header .left h1{
+        text-align: center;
+    }   
+
+    header{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .support-cours .item{
+        width: 200px;
+    }
+
+    .support-cours .item .header i{
+        font-size: 30px;
+    }
+
+}
+@media  screen and (max-width: 680px) {
+   header{
+    flex-wrap: wrap;
+   }
+    
+    
+    
+    .nav{
+        padding: 0 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    nav .barre{
+        font-size: 25px;
+        display:flex;
+        flex-direction: row;
+        justify-content:space-around;
+        background-color: #fff;
+        align-items: center;
+        height: 80px;
+    }
+    nav .menu{
+        display: none;
+        margin-left: 50px;
+        height: 80px;
+    }
+    
+    header{
+        padding: 0 80px;
+        height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    
+    header .left{
+        width: 500px;
+    }
+    
+    header .left h1{
+        font-size: 70px;
+        margin-top: 0px;
+        text-align: left;
+        color: #fff;
+        max-width: 400px;
+    }
+    
+    header img{
+        width: 300px;
+        padding-top: -100px;
+    }
+
+    .earth{
+        width: 280px;
+        height: 280px;
+        background: url(Assets/Terr_tourne_petit.jpg.png);
+    }  
+
+    .circle span{
+        
+        font-size: 3.5em;
+        transform: rotateY(calc(var(--i) * calc(360deg / 28)))
+        translateZ(169px) ;
+    }  
+
+    @keyframes animateEarth
+    {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 640px 0;
+    }
+    }
+    
+    h2.separator{
+        padding: 0 80px;
+        font-size: 50px;
+        margin-top: 40px;
+        color: #fff;
+    }
+    
+    .support-cours{
+        padding: 0 15px;
+        margin: 50px 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    
+    } 
+    
+    .support-cours .item,
+    .act-list .item{
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 350px;
+        
+    }
+
+    .support-cours .item{
+        width: 190px;
+    }
+    
+    .support-cours .item:hover,
+    .act-list .item:hover{
+        box-shadow: none;
+        background: none;
+        color: #fff;
+    }
+    
+    .support-cours .item .header{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .support-cours .item .header i{
+        font-size: 30px;
+    }
+    
+    .support-cours .item .header h5{
+        font-size: 19px;
+        text-align: left;
+    }
+    
+    .support-cours .item p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0 4px;
+    }
+    
+    .act-list{
+        padding: 0 80px;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px
+    }
+    
+    .act-list .item{
+        width: auto;
+    }
+    
+    .act-list .item img{
+        width: 280px;
+        height: 280px;
+        border-radius: 18px;
+    }
+    
+    .act-list .item .info{
+        margin-top: 10px;
+    
+    }
+    
+    .act-list .item .info h5{
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .act-list .item .info p{
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 280px;
+    
+    }
+    
+    
+    .act-list .item .info .correction,
+    .act-list .item .info .act,
+    .act-list .item .info .video{
+        margin-top: 15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 100px;
+        background-color: #f1f1f1;
+        border-radius: 18px;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .act-list .item .info .correction:hover,
+    .act-list .item .info .act:hover,
+    .act-list .item .info .video:hover{
+        box-shadow: none;
+    }
+    .act-list .item .info i{
+        margin-right: 5px;
+        color: black;
+    }
+    
+    footer{
+        margin-top: 80px;
+        background-color: black;
+        color: #fff;
+        padding: 80px 80px;
+    }
+    footer a{
+        color: #fff;
+    }
+    footer a:hover{
+        color: rgb(22, 115, 202);
+    }
+    
+    footer h3{
+       font-size: 45px;
+    }
+    
+    footer .source{
+        padding: 20px 0px;
+        font-size: 25px;
+    }
+    
+   
+}
+
+
+
+@media  screen and (max-width: 500px) {
+
+    body{
+        background-size: cover;
+    }
+
+    nav .barre{
+         font-size: 20px;
+    }
+
+     
+     
+     h2.separator{
+         padding: 0 80px;
+         font-size: 40px;
+         margin-top: 40px;
+         color: #fff;
+     }
+     
+     .support-cours{
+         padding: 0 15px;
+         margin: 50px 0 20px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+     
+     } 
+     
+     .support-cours .item,
+     .act-list .item{
+         padding: 15px;
+         
+     }
+ 
+     .support-cours .item{
+         width: 150px;
+     }
+     
+     .support-cours .item:hover,
+     .act-list .item:hover{
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         background: #fff;
+         color: black;
+     }
+     
+    
+     .support-cours .item .header{
+        align-items: left;
+     }
+     .support-cours .item .header i{
+         font-size: 16px;
+         text-align: left;
+     }
+     
+     .support-cours .item .header h5{
+         font-size: 17.5px;
+         text-align: left;
+     }
+     
+     .support-cours .item p{
+         font-size: 15px;
+         text-align: center;
+         margin-top: 10px;
+         padding: 0 4px;
+     }
+     
+     .act-list{
+         padding: 0 80px;
+         margin-top: 30px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px
+     }
+     
+     .act-list .item{
+         width: auto;
+     }
+     
+     .act-list .item img{
+         width: 250px;
+         height: 250px;
+         border-radius: 18px;
+     }
+     
+     .act-list .item .info{
+         margin-top: 10px;
+     
+     }
+     
+     .act-list .item .info h5{
+         font-size: 25px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         
+     }
+     
+     .act-list .item .info p{
+         font-size: 19px;
+         margin-top: 10px;
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         max-width: 240px;
+     
+     }
+     
+     
+     .act-list .item .info .correction,
+     .act-list .item .info .act,
+     .act-list .item .info .video{
+         margin-top: 15px;
+         display:flex;
+         align-items: center;
+         justify-content: center;
+         padding: 10px 100px;
+         background-color: #f1f1f1;
+         border-radius: 18px;
+         box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+         transition: all 0.3s ease;
+     }
+     
+     .act-list .item .info .correction:hover,
+     .act-list .item .info .act:hover,
+     .act-list .item .info .video:hover{
+         box-shadow: none;
+     }
+     .act-list .item .info i{
+         margin-right: 5px;
+         color: black;
+     }
+     
+     footer{
+         margin-top: 80px;
+         background-color: black;
+         color: #fff;
+         padding: 80px 80px;
+     }
+     footer a{
+         color: #fff;
+     }
+     footer a:hover{
+         color: rgb(22, 115, 202);
+     }
+     
+     footer h3{
+        font-size: 45px;
+     }
+     
+     footer .source{
+         padding: 20px 0px;
+         font-size: 25px;
+     }
+     
+    
+}
+
+@media screen and (max-width: 430px){
+
+    body{
+        background-size: auto;
+    }
+
+    .earth{
+        top: 50%;
+        width: 237px;
+        height: 237px;
+        background: url(Assets/Terr_tourne_minuscule.jpg.png);
+    }  
+
+    .circle span{
+        
+        font-size: 3em;
+        transform: rotateY(calc(var(--i) * calc(360deg / 28)))
+        translateZ(147px) ;
+    }  
+
+    @keyframes animateEarth
+    {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 474px 0;
+    }
+    }
+
+    .act-list{
+        overflow-x: scroll;
+    }
+
+    .act-list .container{
+        padding: 0 0px;
+        margin-top: 30px;
+        width: 130%;
+        display: grid;
+        grid-column: auto;
+        grid-template-columns: 280px 280px 280px 280px 280px 280px;
+        grid-template-rows: 100%;
+        justify-content: space-between;
+        grid-gap: 60px;
+        
+    }
+
+    .support-cours .item:hover,
+     .act-list .item:hover{
+         box-shadow: none;
+         background: #fff;
+         color: black;
+     }
+
+    
+
+ }

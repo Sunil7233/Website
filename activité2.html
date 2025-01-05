@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="activité2.css">
+    <title>Activité</title>
+</head>
+<body>
+
+    <nav>
+        
+        <div class="menu">menu</div>
+        <div class="barre" id="top">
+           <a href="index.html"> Accueil</a>
+           <a href="cours.html"> Cours</a>
+           <a href="activité.html"> Activités</a>
+        </div>   
+    </nav>
+
+    <div class="arrow">
+        <a href="#top">
+             <i class='bx bx-up-arrow-alt'></i>
+        </a>  
+     </div>
+
+     <div class="calculatrice">
+        <i class='bx bx-calculator' ></i>
+   </div>
+
+    <div class="box">
+        <div class="cross">
+            <div class="croix">
+                <i class='bx bx-x'></i>
+              </div>    
+        </div> 
+        <div class="header">
+          <p id="return">AC</p>
+          <div class="input"></div>
+        </div>
+        <div class="div">
+          <p id="btn-1">1</p>
+          <p id="btn-2">2</p>
+          <p id="btn-3">3</p>
+          <p id="btn-plus">+</p>
+     
+          <p id="btn-4">4</p>
+          <p id="btn-5">5</p>
+          <p id="btn-6">6</p>
+          <p id="btn-moins">-</p>
+    
+      
+          <p id="btn-7">7</p>
+          <p id="btn-8">8</p>
+          <p id="btn-9">9</p>
+          <p id="btn-fois">*</p>
+     
+     
+          <p id="btn-0">0</p>
+          <p id="btn-div">.</p>
+          <p id="pi">π</p>
+          <p id="btn-div">/</p>
+  
+          <p id="btn-div">x²</p>
+          <p id="btn-egal">=</p>
+     
+        </div> 
+      
+    </div>
+
+     <header>
+        <div class="title">
+            <h1>Activité 2</h1>
+            <p>SE REPERER SUR TERRE </p>
+        </div>
+        <img src="Assets/Act.2-1.png">
+    </header>
+
+    <div class="container">
+        <div class="item">
+            <h2 class="question">
+                1) Quelle coordonnée, longitude ou latitude, partage Léo en première approximation avec 
+                chacune des villes de Cuenca et Constance quand il est à Saint Nazaire ?
+            </h2>
+            <div class="text">
+                <p>
+                    Comme on peut le voir dans le tableau juste au dessus, Léo partage en première approximation, la <a href="cours.html#ancre2">longitude</a> avec la ville de Cuenca et la
+                    <a href="cours.html#ancre2">latitude</a> de Constance quand il est à Saint-Nazaire.
+                </p>
+                <img id="grand" src="Assets/Act.2-2.png">
+                <p>
+                    Le point <strong id="vert">vert</strong> correspond à <strong id="vert">Cuenca</strong><br>
+                    Le point <strong id="jaune">jaune</strong> correspond à <strong id="jaune">Saint-Nazaire</strong><br>
+                    Le point <strong id="bleu">bleu</strong> correspond à <strong id="bleu">Constance</strong>
+                </p>
+            </div>    
+        </div>
+        <div class="item">
+            <h2 class="question">
+                2) Lequel des deux amis, Manolo ou Pierre, est le plus proche de Léo ? Calculez d’abord la 
+                    distance St Nazaire Cuenca que l’on notera d<sub>S-Cuenca</sub>. 
+            </h2>
+            <div class="text">
+                <p>
+                    On va d’abord calculer la distance entre Manolo qui se situe à Cuenca et Léo qui se situe à Saint-Nazaire. On nous dit également que Saint-Nazaire est à 47°16 N -2°12 et que Cuenca est à 40°04 N 2°07. </br> </br>Pour être plus précis on sait que :</br>  1°01= 1° + 1/60° ≈ 1,0167°
+                    </br>Donc on peur utiliser ça pour calculer plus précisément leur latitude.
+                    </br>47°16 = 47° + 16/60° ≈ 47,267° 
+                    </br>40°04 = 40° + 4/60° ≈ 40,067° 
+                    </br> </br>Comme vous pouvez le voir j’ai juste calculer leur latitude. En effet on a vu dans la question 1 que Cuenca et Saint-Nazaire partagent la même longitude. Cela signifie que ils sont sur le même <a href="cours.html#meridien">méridien</a>. 
+                    </br></br>Pour le visualiser, vous pouvez vous imaginer que il y a un cercle de 360° .
+                </p>
+                <img src="Assets/Act.2-3.png">
+                <p>
+                     Dans ce cercle, Saint-Nazaire se situe sur un point sur le bord du cercle(A) et Cuenca se situe sur un autre point sur le bord du même cercle(B).
+                     Également le rayon(r) de ce cercle est 6400km, ce qui correspondant au rayon de la Terre et l’angle(θ) qui sépare les deux points est égale à l’angle en radians correspondants à la différence de la latitude de Cuenca et de Saint-Nazaire.
+                </p> 
+                <p>   
+                     Dans cette image, on sait aussi que la longueur de l’arc AB est égale à r × θ car:
+                    </br> </br>→ Dans tout cercle de rayon « r », on détermine la longueur m d’un arc AB  telle que : 
+                    </br> mAB  = r × θ 
+
+                </p> 
+
+                
+                <p>
+                    </br> </br>
+                    Commençons par calculer la différence de la latitude de Cuenca et de celle de Saint-Nazaire : </br> 47, 267 – 40,067 = 7,2°
+                    </br></br>Ensuite, nous devons calculer l’angle correspondant cette différence en radians (θ). Pour cela on peut faire un produit en croix. En effet on sait que : 
+                    </br></br><strong id="rouge">1 tour de cercle = 2 π radians = 360 °</strong> 
+                    </br></br> Donc :  θ = x × 2π/ 360 </br>
+                    θ =7, 2 × 2π / 360 
+                    </br>θ ≈ 0,12566
+                    </br></br>Finalement, pour calculer la distance ,d<sub>s-cuenca</sub>,  entre Cuenca et Saint-Nazaire en km on peut utiliser la formule : ds-cuenca  = r × θ où r est égale au rayon de la Terre 6400km et où θ est égale à 0,12566 :
+                    </br>d<sub>s-cuenca</sub> = 6400 × 0,13
+                    </br>d<sub>s-cuenca</sub> ≈  804 km
+                    </br></br>La distance entre Léo et Manolo est alors de 804 km. </br></br>Pour trouver le résultat le plus précis j'ai essayé de prendre à chaque calcule tout les chiffres affichés par la calculatrice.(J’ai mis des résultats arrondis à chaque calcule mais pour trouver le résultat final j’ai gardé tous les chiffres le plus précisément possible pour avoir un résultat cohérent. Donc je vous conseille de ne pas prendre exactement mes réponses pour chaque calcule)
+                    
+                </p>
+                
+            </div>   
+            <div class="item">
+                <div class="text">
+                    <p>
+                        Par la suite, on peut calculer la distance entre Léo qui se situe encore à Saint-Nazaire et Pierre qui si situe à Constance. On nous apprend que Saint-Nazaire est à 47°16 N -2°12 et que Constance est à 47°40 et 9°10 E. 
+                        </br>Donc plus précisément :
+                        </br>47°16 = 47° + 16/60° ≈ 47,267° 
+                        </br>-2°12 = -2° + 12/60° ≈ -2,2° 
+                        </br>9°10 = 9° + 10/60° ≈ 9,167° 
+                        </br></br>Comme on a vu dans la question 1, ces deux villes partagent la même latitude mais pas la même longitude. Ils se situent donc sur la même <a href="cours.html#ancre2">parallèle</a>. 
+                        </br></br>On peut se visualiser cette situation encore une fois par un  cercle.
+                    </p> 
+                    <img src="Assets/Act.2-3.png">
+                    <p> 
+                        Dans ce cercle le point A correspond la position de Saint-Nazaire et B correspond à la position de Constance.
+                        θ y est égale à l’angle en radians correspondants à la différence de la longitude de Saint-Nazaire et de Constance. 
+                        Cependant ce qui change vraiment du cercle précédent c’est le rayon r de ce cercle car ces deux villes ont une longitude qui diffères donc ils ne sont pas sur le même méridien et on sait que le rayon de la Terre varie en fonction de la latitude.
+                    </p>
+                    <img src="Assets/Act.2-4.png">
+                    <p>   
+                        Pour déterminer ce rayon r, on peut utiliser la formule : 
+                        cos  φ = r/R  , où R correspond au Rayon de la Terre en km et φ est égale à l’angle en radian qui correspond à la latitude des deux villes.  
+    
+                    </p> 
+    
+                    
+                    <p>
+                        </br> </br>
+                        Donc commençons par calculer l’angle φ correspondant à la  latitude de ces deux villes en radian. Pour cela on peut aussi utiliser un produit en croix comme au début :
+                        </br>φ = 47,267 × 2π / 360
+                        </br>φ ≈ 0,8250
+                        </br></br>Ensuite on peut utiliser la formule cos φ = r/R pour calculer le rayon r de la Terre à la latitude de Saint-Nazaire et Constance :
+                        </br>cos φ = r/R     soit r = R × cos φ
+                        </br>r = 6400 × cos(0,82)
+                        </br>r ≈ 4342, 93 km
+                        </br></br>Puis, nous pouvons calculer la différence entre la longitude de Saint-Nazaire et Constance :
+                        </br>9,167 +2,2 = 11,367°  
+                        </br></br>Après nous devons calculer l’angle (θ) correspondant cette différence en radians .Pour cela on peut faire un produit en croix encore une fois comme précédemment :
+                        </br>θ = 11,367 × 2π / 360
+                        </br>θ ≈ 0,198
+
+                        </br></br>Finalement, pour calculer la distance ,d<sub>s-c</sub>, entre Constance et Saint-Nazaire en km on peut utiliser la formule : ds-c  = r × θ où r est égale au rayon de la Terre à leur latitude 4342,93 km et où θ est égale à 0,198 :
+                        </br>d<sub>s-c</sub> = 4342, 93  × 0,198
+                        </br>d<sub>s-c</sub> ≈  858 km
+                        </br></br>La distance entre Léo et Pierre est alors de 858 km. 
+                        </br></br></br>Donc, Pierre se situe à 858 km de Léo.
+                        </br></br>858 km > 804 km
+                        </br></br>Donc, Manolo est  plus proche de Léo que Pierre.
+
+                    </p>
+                    
+                </div>   
+                <div class="item">
+                    <h2 class="question">
+                        3)  Calculez la longueur de l’arc de parallèle qui sépare Léo de sa mère. En utilisant un système 
+                        d’information géographique tel que Google Earth, précisez s’il s’agit du chemin le plus court pour 
+                        aller à Seattle.  
+                    </h2>
+                    <div class="text">
+                        <p>
+                            Avant tout, on peut se visualise cette situation. 
+                        </p>
+                            <img src="Assets/Act.2-4.png">
+                        <p>  
+                            </br>Dans cette image, les deux plus grands ronds représentent la Terre et ils ont tout les deux comme rayon R, 6400km. Tandis que le, petit rond représente le rayon r de la Terre en fonction de la latitude. Donc dans notre cas à la latitude de Saint-Nazaire et Seattle car comme ont peut le voir ils ont la même latitude.
+                            </br>Également, on nous donnent cette formule :  
+                            </br></br><strong id="rouge">cos φ = r/R soit r = cos φ × R </strong>
+                            </br> </br>Dans notre cas φ est égale à l’angle en radian correspondant à la latitude de Saint-Nazaire et de Seattle et R correspondant au rayon de la Terre, 6400km.
+                            </br></br>Maintenant, on peut calculer plus précisément leur latitude et la longitude de chaque ville :
+                            </br>47°16 = 47° + 16/60° ≈ 47, 267° 
+                            </br>Seattle : 
+                            </br>122°20 = 122° + 20 /60° ≈ 122,333°
+                            </br>Saint-Nazaire :
+                            </br>-2°12 = -2° + 12/60° ≈ -2, 2° 
+                            </br></br>Après, on peut calculer l’angle φ correspondant à la latitude de ces deux villes en radian. Pour cela on peut aussi utiliser un produit en croix comme au début :
+                            </br>φ = 47,267 × 2π / 360
+                            </br>φ ≈ 0,8250
+                            </br></br>Ensuite, on peut utiliser la formule cos φ = r/R pour calculer le rayon r de la Terre à la latitude de Saint-Nazaire et Seattle :
+                            </br>cos φ = r/R     soit r = R × cos φ
+                            </br>r = 6400 × cos(0,8250)
+                            </br>r ≈ 4342, 93 km
+                            </br></br>Puis on peut faire la différence des deux longitudes :
+                            </br>122,333 + 2, 2 = 124,333°
+                            </br></br>Par la suite, nous devons calculer l’angle (θ) correspondant cette différence en radians .Pour cela on peut faire un produit en croix encore une fois comme précédemment :
+                            </br>θ = 124,333 × 2π / 360
+                            </br>θ = 2,17
+                            </br></br>Finalement, pour calculer la distance ,d<sub>s-s</sub>, entre Seattle et Saint-Nazaire en km on peut utiliser la formule : ds-s  = r × θ où r est égale au rayon de la Terre à leur latitude 4342,93 km et où θ est égale à 2,17 :
+                            </br>d<sub>s-s</sub> = 4342, 93  × 2,17
+                            </br>d<sub>s-s</sub> ≈  9422 km
+                            </br></br>La distance entre Léo et sa mère est alors de 9422 km. 
+                            </br></br>On remarque que dans google earth, la distance entre Seattle et Saint-Nazaire est de 8002 km. 
+                        </p>
+                        <img src="Assets/Act.2-5.png" >
+                        <p>   
+                            Donc non ce n'est pas le chemin le plus court que nous avons calculé. Puisque, en effet,
+                            nous dans nos calcules on a calculé la longueur de l'arc parallèle entre Seattle et Saint-Nazaire mais comme on peut le voir ce n'est pas le chemin le plus court pour aller de Seattle à Saint-Nazaire
+                            en avion. Effectivement, pour trouver la bonne distance entre ces deux villes (celle donné par google earth)il faudrait calculer le l'orthodromie 
+                            (<a href="https://www.maxicours.com/se/cours/la-forme-de-la-terre/">l'arc de grand cercle</a>)qui le sépare car la Terre est une sphère donc l'arc de grand cercle est le chemin le plus court qui sépare deux villes sur la Terre. Cepandant il n'y a que les méridiens et l'équateurs qui sont
+                            des grands cercles sur la Terre et les arcs parallèles n'en sont pas.
+                        </p>    
+                            
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Sources</h3>
+        <div class="source">
+            <i class='bx bxs-file-txt'></i>
+            <a href="Assets/Sources.pdf">Tous nos sources sont sur ce document</a>
+        </div>    
+    </footer>
+
+    <script src="Assets/calculatrice/index.js"></script>
+    
+</body>
+</html>
