@@ -165,6 +165,20 @@ nav .menu{
     grid-column-end: 5;
 }
 
+.video{
+    margin-top: -190px;
+    height: 400px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+video{
+    height: 100%;
+    
+}
+
 header{
     padding: 0 80px;
     height: calc(100vh - 80px);
