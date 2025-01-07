@@ -166,7 +166,7 @@ nav .menu{
 }
 
 .video{
-    margin-top: -190px;
+    margin-top: 0px;
     height: 400px;
     display: flex;
     align-items:center;
