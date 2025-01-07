@@ -328,7 +328,9 @@ footer .source{
 
 @media screen and (max-width: 1220px){
 
-
+    video{
+        padding-left: 70px;
+    }
     .container .item .text table img{
         width: 450px;
     }
